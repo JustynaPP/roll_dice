@@ -12,10 +12,8 @@ class Roller extends StatefulWidget {
 class _RollerState extends State<Roller> {
   var currentDiceValue = 'assets/images/1.png';
 
-  var sides = 4;
-
   void rollDice() {
-    var roll = Random().nextInt(sides) + 1;
+    var roll = Random().nextInt(6) + 1;
     setState(() {
       currentDiceValue = 'assets/images/$roll.png';
     });
